@@ -194,6 +194,7 @@ type Config struct {
 	MYSQL_USER string
 	MYSQL_PASS string
 	MYSQL_HOST string
+	PORT       string
 }
 
 func main() {
@@ -227,5 +228,5 @@ func main() {
 	router.HandleFunc(`/{token}`, UnshortenHandler)
 	router.PathPrefix("/static/").Handler(http.StripPrefix("/static", http.FileServer(http.Dir("./assets"))))
 
-	http.ListenAndServe(":8080", router)
+	http.ListenAndServe(cfg.PORT, router)
 }
