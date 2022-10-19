@@ -1,0 +1,4 @@
+MYSQL_DB = "forkort"
+MYSQL_USER = "forkort"
+MYSQL_PASS = "Passw0rd"
+MYSQL_HOST = "127.0.0.1:3306"

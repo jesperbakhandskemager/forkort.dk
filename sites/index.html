@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>Forkort.dk - Forkort dine links</title>
+ <link rel="stylesheet" href="/static/style.css">
+ <meta name="description" content="Forkort.dk gør dine lange links korte.">
+</head>
+<body>
+<ul>
+  <li class="active"><a href="/">Hjem</a></li>
+  <li><a href="/stats">Statistikker</a></li>
+  <li><a href="/about">Omkring</a></li>
+</ul>
+
+  <h1> Forkort.dk - Forkort dine links</h1>
+  <h2><i>Altid uden Reklamer og Trackere</i></h2>
+<div class="main">
+  <form method="POST">
+    <!-- <p>Indtast link du ønsker at forkorte i boksen nedenfor: </p> -->
+    <label>Indtast dit lange link:</label><br />
+    <input type="text" name="userLink" id="userLink" value="">
+    <button type="submit">Indsend</button>
+</form>
+    {{if .Error}}
+  <p>Indsend et gyldigt fuldt URL med http/https foran linket</p>
+{{end}}
+  <br>
+</div>
+</body>
+</html>
