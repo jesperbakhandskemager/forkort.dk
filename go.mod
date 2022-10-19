@@ -1,4 +1,4 @@
-module forkort.dk
+module github.com/jesperbakhandskemager/forkort.dk
 
 go 1.19
 
