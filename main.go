@@ -207,7 +207,7 @@ func main() {
 		panic(err)
 	}
 
-	db, err = sql.Open("mysql", cfg.MYSQL_USER+":@("+cfg.MYSQL_HOST+"/"+cfg.MYSQL_DB+"?parseTime=true")
+	db, err = sql.Open("mysql", cfg.MYSQL_USER+":@("+cfg.MYSQL_HOST+")/"+cfg.MYSQL_DB+"?parseTime=true")
 	if err != nil {
 		log.Fatal(err)
 	}
