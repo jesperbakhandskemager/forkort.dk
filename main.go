@@ -207,8 +207,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
-	db, err = sql.Open("mysql", cfg.MYSQL_USER+":"+cfg.MYSQL_PASS+"@("+cfg.MYSQL_HOST+")/"+cfg.MYSQL_DB+"?parseTime=true")
+	connectionString := fmt.Sprintf("%s:%s@(%s)/%s?parseTime=true", cfg.MYSQL_USER, cfg.MYSQL_PASS, cfg.MYSQL_HOST, cfg.MYSQL_DB)
+	db, err = sql.Open("mysql", connectionString)
 	if err != nil {
 		log.Fatal(err)
 	}
